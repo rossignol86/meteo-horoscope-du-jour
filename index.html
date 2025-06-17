@@ -28,9 +28,16 @@
     <meta name="twitter:description" content="Application météo et horoscope quotidienne. Simple, rapide, responsive.">
     <meta name="twitter:image" content="https://rossignol-franck-meteo-horoscope.sidathsoeun.fr/assets/images/logorossignol.webp"> <!-- idem -->
  
+    <!-- préconnects (tu les as déjà, on garde) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- preload + onload = chargement non bloquant -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    </noscript>
     
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="icon" href="favicon.ico">
@@ -51,7 +58,7 @@
             </div>
             <div class="conteneurblocs">
                 <div class="bloc1">
-                    <img class="blocimage" src="assets/images/api.webp" alt="Illustration de la demande de projet">
+                    <img class="blocimage" src="assets/images/api.webp" alt="Photo representant une demande de projet pour application mobile">
                     <h2>Brief du projet <br> Landing page <br> vers les 2 API</h2>
                     <div class="textbloc">
                         <p>Creation d'une landing page. <br>    
@@ -65,7 +72,7 @@
                     </div>
                 </div>
                 <div class="bloc1">
-                    <img class="blocimage" src="assets/images/applimeteo.webp" alt="Illustration Météo">
+                    <img class="blocimage" src="assets/images/applimeteo.webp" alt="Photo representant une main tenant un téléphone avec une application météo">
                     <h2>Application <br> météo</h2>
                     <div class="textbloc">
                         <p>Consultez en un clic les prévisions détaillées de votre ville ou de n’importe quelle destination.
@@ -75,7 +82,7 @@
                     </div>
                 </div>
                 <div class="bloc2">
-                    <img class="blocimage" src="assets/images/applihoroscope.webp" alt="Illustration Horoscope">
+                    <img class="blocimage" src="assets/images/applihoroscope.webp" alt="Photo representant une main tenant un téléphone avec une application horoscope">
                     <h2>Application <br> horoscope</h2>
                     <div class="textbloc">
                         <p>Sélectionnez votre signe du zodiaque et accédez instantanément à votre message du jour.
@@ -92,10 +99,10 @@
   <!-- Footer -->
   <footer class="footer-content">
     <div>
-      <span>
-        <a href="./assets/pages/meteo.html">Votre météo</a> <span> –</span>
-        <a href="./assets/pages/horoscope.html">Votre horoscope</a> <span> –</span>
-        <a href="./assets/pages/apropos.html">&nbsp;A&nbsp;propos</a> – &nbsp;
+      
+        <a href="./assets/pages/meteo.html">Votre météo</a> -
+        <a href="./assets/pages/horoscope.html">Votre horoscope</a> -
+        <a href="./assets/pages/apropos.html">A propos</a> -
         <a href="./assets/pages/mentionslegales.html">Mentions légales</a> <br>
 
         <a href="https://rossignolfranck.alwaysdata.net/portfolio/" target="_blank">Franck Rossignol</a> – Maquette réalisé sur FIGMA – Développé sur Visual Studio Code <br>
