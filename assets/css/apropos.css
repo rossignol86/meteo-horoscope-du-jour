@@ -58,12 +58,13 @@ ul {
 
 a {
   font-family: "Inter", sans-serif;
-  color: #c9184a;
+  color: #F66960;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  font-weight: 800;
 }
 
 p {
