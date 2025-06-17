@@ -127,6 +127,45 @@ p {
     text-decoration: underline;
 }
 
+
+/* RGPD */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #dadada;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  display: none;
+  z-index: 1000;
+}
+
+.cookie-banner p {
+  margin: 0;
+  display: inline;
+}
+
+.cookie-banner a {
+  color: #00856a;
+  text-decoration: underline;
+}
+
+.cookie-banner button {
+  margin-left: 1rem;
+  background-color: #00856a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+
+
 /* Responsive bonus */
 @media screen and (max-width: 600px) {
     .conteneurblocs {
