@@ -4,4 +4,4 @@ Allow: /
 
 
 # Emplacement du sitemap (important pour le SEO)
-Sitemap: https://rossignol-franck-mini-cgr-fictif.sidathsoeun.fr/sitemap.xml
+Sitemap: https://rossignol-franck-meteo-horoscope@sidathsoeun.fr/sitemap.xml
