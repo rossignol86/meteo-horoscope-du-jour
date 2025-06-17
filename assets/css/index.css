@@ -1,0 +1,164 @@
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Flex", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Titres */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: "Amarante", serif;
+    color: #F66960;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: "Amarante", serif;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    font-weight: 800;
+    color: #680000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphes */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #000;
+    padding: 10px;
+}
+
+/* Conteneur principal */
+.conteneurblocs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Blocs communs */
+.bloc1, .bloc2, .bloc3 {
+    flex: 1 1 300px;
+    max-width: 400px;
+    height: 100%;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.bloc1:hover, .bloc2:hover, .bloc3:hover {
+    transform: scale(1.05);
+    overflow: hidden;
+}
+
+.textbloc {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px 0 10px 0;
+}
+
+/* Image dans bloc */
+.blocimage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Liens */
+.lienhtml {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.lienhtml:hover {
+    color: #F66960;
+    font-weight: 900;
+}
+
+/* Footer */
+.footer-content {
+    color: #000;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+.footer-content a {
+    color: #F66960;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive bonus */
+@media screen and (max-width: 600px) {
+    .conteneurblocs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloc1, .bloc2, .bloc3 {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-top: 10px;
+    }
+
+    /* Liens */
+    .lienhtml {
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: 400;
+        color: black;
+    }
+
+    .lienhtml:hover {
+        color: #F66960;
+        font-weight: 900;
+    }
+}
