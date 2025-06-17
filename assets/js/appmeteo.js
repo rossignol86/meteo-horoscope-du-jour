@@ -6,19 +6,19 @@ const apiKey = "e532ffa02f4ef3cb7768a4eb2c79af2d";
 function getWeatherImage(condition) {
     switch (condition) {
         case "Clear":
-            return "../images/beau.jpg";
+            return "../images/beau.webp";
         case "Clouds":
-            return "../images/nuageux.jpg";
+            return "../images/nuageux.webp";
         case "Rain":
-            return "../images/pluie.jpg";
+            return "../images/pluie.webp";
         case "Snow":
-            return "../images/neige.jpg";
+            return "../images/neige.webp";
         case "Thunderstorm":
-            return "../images/orages.jpg";
+            return "../images/orages.webp";
         case "Mist":
         case "Fog":
         case "Haze":
-            return "../images/brouillard.jpg";
+            return "../images/brouillard.webp";
     }
 }
 
