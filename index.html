@@ -58,7 +58,7 @@
             </div>
             <div class="conteneurblocs">
                 <div class="bloc1">
-                    <img class="blocimage" src="assets/images/api.webp" alt="Photo representant une demande de projet pour application mobile">
+                    <img class="blocimage" src="assets/images/api.webp" alt="Photo representant une demande de projet pour application mobile" width="400" height="300">
                     <h2>Brief du projet <br> Landing page <br> vers les 2 API</h2>
                     <div class="textbloc">
                         <p>Creation d'une landing page. <br>    
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="bloc1">
-                    <img class="blocimage" src="assets/images/applimeteo.webp" alt="Photo representant une main tenant un téléphone avec une application météo">
+                    <img class="blocimage" src="assets/images/applimeteo.webp" alt="Photo representant une main tenant un téléphone avec une application météo" width="400" height="300">
                     <h2>Application <br> météo</h2>
                     <div class="textbloc">
                         <p>Consultez en un clic les prévisions détaillées de votre ville ou de n’importe quelle destination.
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="bloc2">
-                    <img class="blocimage" src="assets/images/applihoroscope.webp" alt="Photo representant une main tenant un téléphone avec une application horoscope">
+                    <img class="blocimage" src="assets/images/applihoroscope.webp" alt="Photo representant une main tenant un téléphone avec une application horoscope" width="400" height="300">
                     <h2>Application <br> horoscope</h2>
                     <div class="textbloc">
                         <p>Sélectionnez votre signe du zodiaque et accédez instantanément à votre message du jour.
@@ -123,15 +123,16 @@
 
 
   <script>
-        // Vérifie si le consentement a déjà été donné
+   // JS cookie banner ajusté
     if (!localStorage.getItem("cookiesAccepted")) {
-      document.getElementById("cookie-banner").style.display = "block";
+    document.getElementById("cookie-banner").classList.add("active");
     }
 
     document.getElementById("accept-cookies").addEventListener("click", function () {
-      localStorage.setItem("cookiesAccepted", "true");
-      document.getElementById("cookie-banner").style.display = "none";
+    localStorage.setItem("cookiesAccepted", "true");
+    document.getElementById("cookie-banner").classList.remove("active");
     });
+
   </script>
     
 </body>

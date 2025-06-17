@@ -35,7 +35,7 @@ h1, h2 {
 h1 {
   font-size: 3.5rem;
   font-weight: 900;
-  color: #F66960;
+  color: #fa4a3d;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -92,8 +92,10 @@ p {
 /* IMAGE DANS BLOC */
 .blocimage {
   width: 100%;
-  display: block;
+  height: auto;
+  max-height: 300px;
   object-fit: cover;
+  display: block;
 }
 
 /* LIENS */
@@ -141,9 +143,18 @@ p {
   padding: 1rem;
   text-align: center;
   font-size: 0.9rem;
-  display: none;
+  visibility: hidden;   /* remplace display:none */
+  opacity: 0;
+  min-height: 60px;     /* réserve la place même cachée */
   z-index: 1000;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
 }
+
+.cookie-banner.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .cookie-banner p {
   margin: 0;
