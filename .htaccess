@@ -1,32 +1,43 @@
-# Définir le fichier par défaut
-DirectoryIndex index.html
+# -----------------------------------
+# 📦 Compression GZIP
+# -----------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
 
-# Interdire l'indexation des dossiers
-Options -Indexes
-
-# Rediriger les erreurs 404 vers index.html (utile pour une SPA)
-ErrorDocument 404 /index.html
-
-# Forcer le charset en UTF-8
-AddDefaultCharset UTF-8
-
-# edirection vers HTTPS
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Rediriger toutes les URL vers index.html (SPA support pour React, Vue, etc.)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
-
-# Mise en cache des fichiers statiques
+# -----------------------------------
+# 🧠 Cache navigateur
+# -----------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType text/html "access plus 1 day"
-  ExpiresByType text/css "access plus 1 week"
-  ExpiresByType application/javascript "access plus 1 week"
-  ExpiresByType image/jpeg "access plus 1 month"
-  ExpiresByType image/png "access plus 1 month"
-  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
+
+# -----------------------------------
+# 🔒 Sécurité minimale
+# -----------------------------------
+# Désactive l'exécution des scripts dans certains répertoires
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Empêche le listing des dossiers
+Options -Indexes
+
+# -----------------------------------
+# 🌐 Redirection vers HTTPS si SSL actif (optionnel)
+# -----------------------------------
+#<IfModule mod_rewrite.c>
+#  RewriteEngine On
+#  RewriteCond %{HTTPS} off
+#  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+#</IfModule>

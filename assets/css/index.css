@@ -181,25 +181,38 @@ p {
   .conteneurblocs {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .bloc1, .bloc2, .bloc3 {
     width: 90%;
+    min-height: 730px;
   }
 
   h1 {
     font-size: 2.8rem;
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     line-height: 2.5rem;
-    margin-top: 10px;
+    margin-top: 30px;
   }
 
   .lienhtml {
     font-size: 1.1rem;
     font-weight: 500;
   }
+
+  .textbloc {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px 0 10px 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+padding-bottom: 10px;  }
 }
