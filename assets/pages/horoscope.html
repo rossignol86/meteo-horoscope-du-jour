@@ -53,31 +53,8 @@
     <main>
         <section>
 
-            <h1>Votre horoscope du jour</h1>
-            <form id="horoscopeForm">
-                <label for="zodiaqueSelect">Choisissez votre signe astrologique :</label><br>
-                <select id="zodiaqueSelect" required>
-                    <option value="">-- Sélectionnez votre signe --</option>
-                    <option value="aries">Bélier</option>
-                    <option value="taurus">Taureau</option>
-                    <option value="gemini">Gémeaux</option>
-                    <option value="cancer">Cancer</option>
-                    <option value="leo">Lion</option>
-                    <option value="virgo">Vierge</option>
-                    <option value="libra">Balance</option>
-                    <option value="scorpio">Scorpion</option>
-                    <option value="sagittarius">Sagittaire</option>
-                    <option value="capricorn">Capricorne</option>
-                    <option value="aquarius">Verseau</option>
-                    <option value="pisces">Poissons</option>
-                </select>
-                <br><br>
-                <button type="submit">JE DÉCOUVRE</button>
-            </form>
-
-            <div id="horoscopeResult"> </div>
-
-            <div id="horosocope-du-jour">Bonjour, les taureaux  sont à l'honneur ?</div>
+            <h1>Horoscopes</h1>
+            <div id="cards-container">Chargement des données...</div>
 
         </section>
     </main>
@@ -101,10 +78,7 @@
         </div>
     </footer>
 
-
-
-
-
+    <script src="../js/horoscope.js"></script>
 
 </body>
 </html>

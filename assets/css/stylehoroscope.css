@@ -67,6 +67,38 @@ p {
 
 
 
+
+    #cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #007acc;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin: 0.3rem 0;
+    }
+
+
 /* FOOTER */
 .footer-content {
     font-family: "Roboto Flex", sans-serif;
