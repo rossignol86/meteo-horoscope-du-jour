@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: url('../images/star.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    font-family: "Old Standard TT", serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    color: black;
+    transition: background-color 0.8s ease;
+}
+
+/* LOGO */
+.logo {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.logo {
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+main {
+    flex: 1; /* <-- pour pousser le footer en bas */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1em;
+}
+
+h1 {
+    color: rgb(255, 234, 0);
+    font-size: 6rem;
+    line-height: 4.5rem;
+    font-family: "Amarante", serif;
+    margin: 0 auto 0.5em;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1em;
+}
+
+/* CONTAINER DES CARTES */
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* STYLE DES CARTES HOROSCOPE */
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #dee2e6;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* TITRE DU SIGNE */
+.card h2 {
+    font-family: "Amarante", serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+/* TEXTE */
+.card p {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* FOOTER */
+.footer-content {
+    background-color: #ffffff;
+    font-family: "Roboto Flex", sans-serif;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+.footer-content a {
+    color: #F66960;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
