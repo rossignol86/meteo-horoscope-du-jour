@@ -148,7 +148,7 @@ footer {
   font-size: 1rem;
   line-height: 1.6rem;
   border-top: 1px solid #ddd;
-  margin-top: auto;
+  margin-top: 30px;
 }
 
 .footer-content a {
@@ -159,4 +159,22 @@ footer {
 
 .footer-content a:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE */
+  @media screen and (max-width: 600px) {
+  #cards-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  }
+
+  .card {
+  width: 90%;
+  }
+
+  .signe-image {
+  width: 100%;
+  }
+
 }
