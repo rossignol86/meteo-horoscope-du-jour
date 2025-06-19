@@ -5,6 +5,8 @@
 }
 
 html, body {
+    background: url('../images/star.webp') no-repeat center center fixed;
+    background-size: cover;
     height: 100%;
 }
 
@@ -47,62 +49,67 @@ main {
 }
 
 h1 {
-    font-size: 4rem;
+    color: rgb(255, 234, 0);
+    font-size: 6rem;
     line-height: 4.5rem;
     font-family: "Amarante", serif;
     margin: 0 auto 0.5em;
-    text-shadow: 4px 4px 2px rgba(255, 255, 255, 1);
 }
 
-h2 {
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1em;
+}
+
+/* CONTAINER DES CARTES */
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* STYLE DES CARTES HOROSCOPE */
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #dee2e6;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* TITRE DU SIGNE */
+.card h2 {
+    font-family: "Amarante", serif;
     font-size: 3rem;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5rem;
+    color: #495057;
 }
 
-p {
-    font-size: 2rem;
-    line-height: 2.5rem;
+/* TEXTE */
+.card p {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 1.5rem;
+    color: #555;
 }
-
-
-
-
-
-    #cards-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .card:hover {
-      transform: scale(1.02);
-    }
-
-    .card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #007acc;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      margin: 0.3rem 0;
-    }
-
 
 /* FOOTER */
 .footer-content {
+    background-color: #ffffff;
     font-family: "Roboto Flex", sans-serif;
-    padding: 2.5rem 1rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     font-size: 1rem;
     line-height: 1.6rem;
